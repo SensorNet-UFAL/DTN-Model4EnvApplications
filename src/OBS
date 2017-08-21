@@ -1,0 +1,7 @@
+When adopting a unit disk model, a user can control the range of the disk by controlling
+the SN.wirelessChannel.PLd0 parameter. Assume you need the range of the disk to
+be 50m then you should set PLd0 = (TxPowerUsed_dBm – max(receiverSensitivity,
+noisefloor+5dBm) ) – 10*pathLossExponent*log(50)
+12
+
+manual pg 59

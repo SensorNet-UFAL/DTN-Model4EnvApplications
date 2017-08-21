@@ -1,0 +1,12 @@
+fieldLength=750 # meters
+
+for numNodes in 100 
+do 
+	for seed in 6 7 8 
+	do
+
+		echo "Evaluating SSI deployment and Voronoi Cells"
+		Rscript deployment.R $numNodes $fieldLength $seed
+
+	done
+done

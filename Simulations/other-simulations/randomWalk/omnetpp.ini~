@@ -1,0 +1,73 @@
+# ****************************************************************************
+# *  Copyright: National ICT Australia,  2007 - 2010                         *
+# *  Developed at the ATP lab, Networked Systems research theme              *
+# *  Author(s): Athanassios Boulis, Yuriy Tselishchev                        *
+# *  This file is distributed under the terms in the attached LICENSE file.  *
+# *  If you do not find this file, copies can be found by writing to:        *
+# *                                                                          *
+# *      NICTA, Locked Bag 9013, Alexandria, NSW 1435, Australia             *
+# *      Attention:  License Inquiry.                                        *
+# *                                                                          *
+# ***************************************************************************/
+
+[General]
+
+# =============================================
+# Always include the main Castalia.ini file
+# =============================================
+include ../Parameters/Castalia.ini
+
+
+sim-time-limit = 200s
+
+SN.field_x = 50	# meters
+SN.field_y = 50	# meters
+
+SN.numNodes = 2
+SN.deployment = ""
+
+# Physical Test
+SN.physicalProcessName = "CustomizablePhysicalProcess"
+SN.physicalProcess[0].inputType = 3
+SN.physicalProcess[0].directNodeValueAssignment = "(0) 1:{40,50,60}"  
+
+# important wireless channel switch to allow mobility
+SN.wirelessChannel.onlyStaticNodes = false
+SN.wirelessChannel.sigma = 0
+SN.wirelessChannel.bidirectionalSigma = 0
+
+# Choose a radio and set the Tx power to a low value so
+# that node mobility has a better effect on connectivity
+SN.node[*].Communication.Radio.RadioParametersFile = "../Parameters/Radio/CC2420.txt"
+SN.node[*].Communication.Radio.TxOutputPower = "-5dBm"
+
+# These tests use big packets (2kb) to show interference clearly
+# This requires to set the max pkt size in all communication layers
+SN.node[*].Communication.Routing.maxNetFrameSize = 2500
+SN.node[*].Communication.MAC.maxMACFrameSize = 2500
+SN.node[*].Communication.Radio.maxPhyFrameSize = 2500
+
+SN.node[*].ApplicationName = "ValueReporting" #ThroughputTest
+SN.node[*].Application.packet_rate = 5
+SN.node[*].Application.constantDataPayload = 32
+
+SN.node[1].Application.collectTraceInfo = true 
+SN.node[0].MobilityManager.collectTraceInfo = true #ISR: Remember to enable the trace to Mobility Manager
+SN.node[0].SensorManager.collectTraceInfo = true
+
+SN.node[0].Application.isSink = true
+
+SN.node[0].xCoor = 9
+SN.node[0].yCoor = 9
+SN.node[1].xCoor = 10
+SN.node[1].yCoor = 10
+#SN.node[2].xCoor = 5
+#SN.node[2].yCoor = 5
+
+#SN.node[0].MobilityManagerName = "RandomWalk"
+
+# Standard parameters
+#SN.node[0].MobilityManager.updateInterval = 100
+#SN.node[0].MobilityManager.xCoorDestination = 0
+#SN.node[0].MobilityManager.yCoorDestination = 0
+#SN.node[0].MobilityManager.speed = 5

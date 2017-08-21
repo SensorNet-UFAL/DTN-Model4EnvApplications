@@ -1,0 +1,39 @@
+# How many parallel threads
+threads=30
+
+# Always Constant parameters
+appName='"ValueReporting"'
+speed=2 # m/s
+simTime=5000
+fieldLength=100
+deployment='""'
+
+# This Evaluation Constant parameters
+power='"-25dBm"'
+numNodes=50
+sampleRate=25
+evaluation='"varyBuffer"'
+
+# Seed Replications
+replications=(1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30)
+algorithms=('SampleCentral' 'DropRandom')
+bufferSizes=(500 1000 1500 2000 2500)
+
+for algorithm in "${algorithms[@]}"
+do 
+	for power in "${bufferSizes[@]}"
+	do
+		for seed in "${replications[@]}"
+		do
+			if [ ! -e resultados-erro/$seed'_50_'$bufferSize'_erroReconstrucao_'$algorithm'.dat' ] # Check if this seed is already evaluated
+			then 	
+				if [ `expr $seed % $threads` -eq 0 ] # Parallelism control HERE 
+				then
+				    Rscript pairIndexes-Buffer-Cover.R $algorithm $power $seed
+				else
+				    nohup Rscript pairIndexes-Buffer-Cover.R $algorithm $power $seed &
+				fi
+			fi
+done
+done
+done

@@ -1,0 +1,71 @@
+#include "algorithms.h"
+
+int main () {
+
+	int sampleRate = 25; // %
+
+	vector < pair<double,int> > data;
+	unordered_map<string, vector< pair<double,int> >> sinkBuffer;
+
+	for(int j=0; j<10; j++) {
+		string key = to_string(j);
+		int size = rand() % 1 + 20;
+
+		for(int i=0; i<size; i++) {
+
+			double decimal = rand() % 100;
+			double oneSample = rand() % 15 + 25;
+
+			decimal = decimal/100;
+			oneSample = oneSample + decimal;
+
+			pair<double,int> sample(oneSample,i);
+			data.push_back(sample);
+		}
+
+		sinkBuffer.insert({key,data});
+		data.clear();
+	}
+
+	cout << "Data with no reduction." << endl;
+
+	for (auto& x: sinkBuffer) {
+		cout << x.first << ": ";
+
+		for(int i=0; i<x.second.size(); i++)
+			cout << get<0>(x.second[i]) << " ";
+
+		cout << endl << endl;
+	}
+
+/********************************************************************************/
+
+	sinkBuffer = sampleCentral(sinkBuffer, 25, "1");
+
+	for (auto& x: sinkBuffer) {
+		cout << x.first << ": ";
+
+		for(int i=0; i<x.second.size(); i++)
+			cout << get<0>(x.second[i]) << " ";
+
+		cout << endl << endl;
+	}
+
+	sinkBuffer = sampleCentral(sinkBuffer, 25, "0");
+
+	for (auto& x: sinkBuffer) {
+		cout << x.first << ": ";
+
+		for(int i=0; i<x.second.size(); i++)
+			cout << get<0>(x.second[i]) << " ";
+
+		cout << endl << endl;
+	}
+
+	cout << endl;
+
+	return 0;
+}
+
+
+

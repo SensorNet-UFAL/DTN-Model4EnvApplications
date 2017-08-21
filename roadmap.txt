@@ -1,0 +1,104 @@
+AVALIAÇÃO:
+
+-> DENSIDADE: 12 combinações
+
+	20  |  35  |  50*  |  100   (Nós)
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK
+	* POTENCIA: 80
+	* REDUÇÃO: 10 %
+	* BUFFER: 1000
+	* COM PERDA
+
+
+-> POTENCIA -> CONSUMO DE ENERGIA: 12 combinações
+
+	0  |  -10  |  -15  |  -25
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK	
+	* NÓS: 50
+	* REDUÇÃO: 10 %
+	* BUFFER: 1000
+	* COM PERDA
+
+-> TAMANHO DO BUFFER: 12 combinações (Variar no simulador)
+
+	10.000  |  35.000  |  70.000  |  100.000*   (amostras)
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK
+	* NÓS: 50
+	* POTENCIA: 80
+	* REDUÇÃO: 10 %
+	* COM PERDA
+
+-> MODELO: 6 combinações
+
+	IDEAL | REALISTA: 
+		(SWEEP GRID / SEM PERDA | RANDOM WALK / COM PERDA)
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* NÓS: 50
+	* POTENCIA: 80
+	* REDUÇÃO: 25 %
+	* BUFFER: 1000
+
+-> EVENTO:
+
+	COM EVENTO | SEM EVENTO
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK
+	* NÓS: 50
+	* POTENCIA: 80
+	* REDUÇÃO: 25 %
+	* BUFFER: 1000
+	* COM PERDA
+
+
+
+
+
+
+
+
+
+############################################################################################
+
+
+
+-> REDUÇÃO: 12 combinações (Variar no simulador) ## N PRECISA
+
+	5  |  10*  |  25  |  50    (%)
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK
+	* DENSIDADE: 100
+	* RAIO: 80
+	* BUFFER: 10^5
+	* COM PERDA
+
+
+-> MOVIMENTO: 6 combinações (Simular sweep grid em R) ## N PRECISA
+
+	RANDOM WALK*  |  SWEEP GRID
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* DENSIDADE: 100
+	* RAIO: 80
+	* REDUÇÃO: 10 %
+	* BUFFER: 10^5
+	* COM PERDA
+
+-> MODELO DE PERDA DE PACOTES: 6 combinações (Variar no simulador) ## N PRECISA
+
+	COM PERDA* | SEM PERDA
+
+	* DROP RANDOM / DROP NEIGHBOR / SAMPLE CENTRAL
+	* RANDOM WALK
+	* DENSIDADE: 100
+	* RAIO: 80
+	* REDUÇÃO: 10 %
+	* BUFFER: 10^5

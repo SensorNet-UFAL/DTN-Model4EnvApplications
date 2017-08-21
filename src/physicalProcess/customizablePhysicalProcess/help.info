@@ -1,0 +1,12 @@
+You can use the std::string::find() function to find the position of your string delimiter, then use std::string::substr() to get a token.
+
+Example:
+
+std::string s = "scott>=tiger";
+std::string delimiter = ">=";
+std::string token = s.substr(0, s.find(delimiter)); // token is "scott"
+
+    The find(const string& str, size_t pos = 0) function returns the position of the first occurrence of str in the string, or npos if the string is not found.
+
+    The substr(size_t pos = 0, size_t n = npos) function returns a substring of the object, starting at position pos and of length npos.
+

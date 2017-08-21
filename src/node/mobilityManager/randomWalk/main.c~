@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+#include <cstdlib>
+
+
+int main() {
+
+	int i = 101;
+	double random = rand() % i;
+	cout << random << "\n";
+	
+	random = rand() % i;
+	cout << random << "\n";
+
+	random = rand() % i;
+	cout << random << "\n";
+
+	random = rand() % i;
+	cout << random << "\n";
+
+	return 0;
+}
+
