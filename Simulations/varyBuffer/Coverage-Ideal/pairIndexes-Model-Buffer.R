@@ -63,8 +63,8 @@ set.seed(1000*fieldLenght + 10*numNodes + seed + sample(10000,1))
 	figName <- paste("imagens/campo_",samplingAlgorithm,"_",r,'_',n_sensores,'_',percentualReducao,'.eps',sep='')
 	figName2 <- paste("imagens/",r,'_',n_sensores,"_",samplingAlgorithm,"_",percentualReducao,'.eps',sep='')
 	figName3 <- paste("imagens/",r,'_',n_sensores,"_reconst_",samplingAlgorithm,"_",percentualReducao,'.eps',sep='')
-	fileName <- paste("resultados-erro/",r,'_',n_sensores,'_',percentualReducao,'_erroReconstrucao_',samplingAlgorithm,'_Ideal.dat',sep='')
-	fileName2 <- paste("resultados-cobertura/",r,'_',n_sensores,'_',percentualReducao,'_coverage_',samplingAlgorithm,'_Ideal.dat',sep='')
+	fileName <- paste("../resultados-erro/",r,'_',n_sensores,'_',percentualReducao,'_erroReconstrucao_',samplingAlgorithm,'_Ideal.dat',sep='')
+	fileName2 <- paste("../resultados-cobertura/",r,'_',n_sensores,'_',percentualReducao,'_coverage_',samplingAlgorithm,'_Ideal.dat',sep='')
 
 	# Gerando sensores
   	sensores = rSSI(n = n_sensores, r = inhibit, win = square(maxX), giveup = 10^5)
