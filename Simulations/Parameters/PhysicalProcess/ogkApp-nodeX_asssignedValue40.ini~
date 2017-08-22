@@ -1,3 +1,0 @@
-SN.physicalProcessName = "CustomizablePhysicalProcess"
-SN.physicalProcess[0].inputType = 0  		
-SN.physicalProcess[0].directNodeValueAssignment = "(0) 0:(40,41,42)"  
