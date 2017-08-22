@@ -64,9 +64,6 @@ Part 1.2) Configuring Castalia
 
 	3.1) Note: Whenever you change some source file from the /src folder, you need to recompile the simulator via the command above in order to update the changes.
 
-	4) Go to the folder /Simulations/other-simulations/valueReporting-untouched and test the sample simulations with the command:
-
-		Castalia -c General
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
