@@ -1,8 +1,8 @@
+# DTN-Model4EnvApplications Quick Start
+
 This guide works on Ubuntu 14.04 (recommended), or 16.04.
 
 1) Installing and configuring:
-
------------------------------------------------------------------------------------------------------
 
 Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
@@ -38,7 +38,7 @@ Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
 	For further information about OMNeT++, the complete installation guide is available at the following link: https://omnetpp.org/doc/omnetpp/InstallGuide.pdf
 
------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Part 1.2) Configuring Castalia
 
@@ -66,7 +66,7 @@ Part 1.2) Configuring Castalia
 
 		Castalia -c General
 
------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2) Running the simulations
 
@@ -110,5 +110,4 @@ Part 1.2) Configuring Castalia
 
 		Rscript plotGraphic-Error-Buffer.R
 
-
-# DTN-Model4EnvApplications
+--------------------------------------------------------------------------------------------------------------------------------------------------------
