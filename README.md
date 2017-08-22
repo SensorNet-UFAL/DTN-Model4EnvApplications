@@ -38,8 +38,6 @@ Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
 	For further information about OMNeT++, the complete installation guide is available at the following link: https://omnetpp.org/doc/omnetpp/InstallGuide.pdf
 
---------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Part 1.2) Configuring Castalia
 
 	1) Press the shortcut ctrl + alt + T and clone the git files on your home folder.
@@ -70,6 +68,8 @@ Part 1.2) Configuring Castalia
 
 2) Running the simulations
 
+Part 2.1) Installing dependencies and generating inputs:
+
 	1) Go to the folder /DTN-Model4EnvApplications/Parameters/headers, install dependencies for R Scripts:
 
 		sudo apt-get install r-base
@@ -80,17 +80,28 @@ Part 1.2) Configuring Castalia
 
 		sh generateInputs.sh
 		
-	2.1) All the files generated at command above will be saved at the folder /DTN-Model4EnvApplications/Parameters/NodesData
+
+Part 2.2) Running the simulations:
+
+	1) All the files generated at command above will be saved at the folder /DTN-Model4EnvApplications/Parameters/NodesData
 
 
-	3) Simulations are located at folder /DTN-Model4EnvApplications/Simulations, on the subfolders:
-	3.1) /varyBuffer
-	3.2) /varyModel
-	3.3) /varyNodes
-	3.4) /varyPower
-	3.5) /varySampleRate
-	3.6) /varySpeed
-	3.7) /varyTime
+	2) Simulations are located at folder /DTN-Model4EnvApplications/Simulations, on the subfolders:
+
+		2.1) /varyBuffer
+
+		2.2) /varyModel
+
+		2.3) /varyNodes
+
+		2.4) /varyPower
+
+		2.5) /varySampleRate
+
+		2.6) /varySpeed
+
+		2.7) /varyTime
+
 
 	Run the .sh script inside the choosen subfolder, for example, at /DTN-Model4EnvApplications/Simulations/varyBuffer:
 
@@ -98,14 +109,17 @@ Part 1.2) Configuring Castalia
 
 	Note: these .sh scripts have a parallelism parameter to control how many processes will run simultaneously called "threads", set to 8 by default. Increase it if you have a strong machine or will run it on a server will many CPU-cores.
 
-	4) When the simulation finish, run the script to evaluate the results:
+
+Part 2.3) Evaluate results and Generate the plots:
+
+	1) When the simulation finish, run the script to evaluate the results:
 		
 		Rscript pairIndexes-Nodes.R
 
 	 Results will be stored at subfolders /resultados-erro and /resultados-cobertura
 
 
-	5) Inside the folders /resultados-erro and /resultados-cobertura, search for R scripts to plot the graphics, for example,
+	2) Inside the folders /resultados-erro and /resultados-cobertura, search for R scripts to plot the graphics, for example,
 	at /DTN-Model4EnvApplications/Simulations/varyBuffer/resultados-erro:
 
 		Rscript plotGraphic-Error-Buffer.R
