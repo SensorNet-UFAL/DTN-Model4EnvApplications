@@ -6,23 +6,23 @@ This guide works on Ubuntu 14.04 (recommended), or 16.04.
 
 Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
-	- Castalia is a simulator which works as an expansion of OMNeT ++ libraries, downloadable through the link: 
+Castalia is a simulator which works as an expansion of OMNeT ++ libraries, downloadable through the link: 
 
 		https://omnetpp.org/component/jdownloads/download/32-release-older-versions/2290-omnet-4-6 -source-ide-tgz
 
-	1) Uncompress the file in your Home folder.
+1) Uncompress the file in your Home folder.
 
-	2) Press the shortcut ctrl + alt + T and type in the terminal the command:
+2) Press the shortcut ctrl + alt + T and type in the terminal the command:
 
 		sudo gedit .bashrc
 
-	2.1) This command will open a text file with the environment variables, at the end of this file, add the line:
+2.1) This command will open a text file with the environment variables, at the end of this file, add the line:
 
 		export PATH=$PATH:$HOME/omnetpp-4.6/bin
 
-	2.2) Save and close the file. Close the terminal to update the added line in the system.
+2.2) Save and close the file. Close the terminal to update the added line in the system.
 
-	3) Enter the folder omnetpp-4.6, open terminal inside the folder (right mouse button -> open terminal here) and run the commands:
+3) Enter the folder omnetpp-4.6, open terminal inside the folder (right mouse button -> open terminal here) and run the commands:
 
 		sudo apt-get install build-essential gcc g++ bison flex perl tcl-dev tk-dev libxml2-dev zlib1g-dev default-jre doxygen graphviz libwebkitgtk-1.0-0
 
@@ -30,13 +30,13 @@ Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
 		make
 
-	4) After completing the procedure above, test the installation of OMNeT ++ with the commands:
+4) After completing the procedure above, test the installation of OMNeT ++ with the commands:
 
 		cd samples/dyna
 
 		./dyna
 
-	For further information about OMNeT++, the complete installation guide is available at the following link: https://omnetpp.org/doc/omnetpp/InstallGuide.pdf
+For further information about OMNeT++, the complete installation guide is available at the following link: https://omnetpp.org/doc/omnetpp/InstallGuide.pdf
 
 Part 1.2) Configuring Castalia
 
