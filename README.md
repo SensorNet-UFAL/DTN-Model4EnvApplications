@@ -8,7 +8,7 @@ Part 1.1) Installing Dependencies: OMNeT++ 4.6
 
 	Castalia is a simulator which works as an expansion of OMNeT ++ libraries, downloadable through the link: 
 
-		https://omnetpp.org/component/jdownloads/download/32-release-older-versions/2290-omnet-4-6 -source-ide-tgz
+		https://github.com/omnetpp/omnetpp/releases/download/omnetpp-4.6/omnetpp-4.6-src.tgz
 
 	1) Uncompress the file in your Home folder.
 
